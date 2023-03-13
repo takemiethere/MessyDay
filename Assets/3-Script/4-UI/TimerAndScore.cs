@@ -39,10 +39,10 @@ public class TimerAndScore : MonoBehaviour
                     if (hit.transform.CompareTag("Enemy"))
                     {
                         Destroy(hit.transform.gameObject);
-/*                        score++;
-                        scoreText.text = score + " frogs was ate.";
+                        /*                        score++;
+                                                scoreText.text = score + " frogs was ate.";
 
-                        Debug.Log("You ate: " + score + "Frogs");*/
+                                                Debug.Log("You ate: " + score + "Frogs");*/
                     }
                 }
             }
