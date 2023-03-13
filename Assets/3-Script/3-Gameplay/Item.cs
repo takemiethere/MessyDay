@@ -1,14 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
 
 public class Item : MonoBehaviour
 {
-    public int maxClicks = 3;
+
+    public int maxClicks = 5;
     public float fadeDuration = 0.5f;
-    public TextMeshProUGUI countText; // assign this variable to the Text element on your canvas
 
     private int currentClicks = 0;
     private Material material;
@@ -37,18 +35,21 @@ public class Item : MonoBehaviour
         fadedColor.a = 0f;
         material.color = fadedColor;
         Destroy(gameObject);
-
-        // Update the count text on the canvas
-        currentClicks++;
-        if (countText != null)
-        {
-            countText.text = "Wiped " + currentClicks.ToString() + "/" + maxClicks.ToString();
-        }
     }
 
     private void OnMouseDown()
     {
         if (currentClicks < maxClicks)
+        {
+            currentClicks++;
+
+            Color fadedColor = material.color;
+            float alpha = Mathf.Lerp(1f, 0f, (float)currentClicks / maxClicks);
+            fadedColor.a = alpha;
+            material.color = fadedColor;
+        }
+
+        if (currentClicks >= maxClicks)
         {
             StartCoroutine(FadeOut());
         }
