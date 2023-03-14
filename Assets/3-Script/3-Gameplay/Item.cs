@@ -9,15 +9,22 @@ public class Item : MonoBehaviour
 
     public int maxClicks = 5;
     public static int numDestroyed = 0;
-    public static int numToDestroy = 5;
+    public static int maxToDestroy = 5;
     public TextMeshProUGUI uiText;
 
     private int currentClicks = 0;
 
+    private ToolSwitcher toolSwitcher;
+
+
+
+
     void Start()
     {
-        uiText.text = "Clear the dust 0/" + numToDestroy.ToString();
+        uiText.text = "Clear the dust 0/" + maxToDestroy.ToString();
+        toolSwitcher = FindObjectOfType<ToolSwitcher>();
     }
+
 
     void OnMouseDown()
     {
@@ -27,7 +34,7 @@ public class Item : MonoBehaviour
 
             /*Color fadedColor = material.color;   
             fadedColor.a -= fadeAmount;          
-            material.color = fadedColor;  */       
+            material.color = fadedColor;  */
 
 
         }
@@ -36,15 +43,25 @@ public class Item : MonoBehaviour
             //Destroy(gameObject);
             Destroy(gameObject);
             numDestroyed++;
+            
+            if (numDestroyed >= maxToDestroy)  //big O
+            {
+                FindObjectOfType<SuccessScene>().TaskCompleted(1, 5); // task index 1 corresponds to wiping dust
+            }
 
         }
-        
 
-        uiText.text = "Wiped " + numDestroyed.ToString() + "/" + numToDestroy.ToString();
 
-        if (numDestroyed == numToDestroy)
+        uiText.text = "Wiped " + numDestroyed.ToString() + "/" + maxToDestroy.ToString();
+
+        if (numDestroyed == maxToDestroy)
         {
-            
+
+        }
+
+        if (toolSwitcher.GetActiveToolIndex() == 0) // Check if the active tool is the first tool
+        {
+            // Perform the action for taking the trash to the bin
         }
     }
 }
