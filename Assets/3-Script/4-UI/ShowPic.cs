@@ -27,7 +27,9 @@ public class ShowPic : MonoBehaviour
 
             // Make picture face player
             Vector3 playerDirection = Camera.main.transform.position - pictureObject.transform.position;
-            playerDirection.y = 0; // project onto xz plane
+            //playerDirection.y = 0; // project onto xz plane
+            //playerDirection.x = 0; // project onto xz plane
+            //playerDirection.z = 0; // project onto xz plane
             pictureObject.transform.rotation = Quaternion.LookRotation(playerDirection);
         }
         else

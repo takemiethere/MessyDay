@@ -1,57 +1,50 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class Item : MonoBehaviour
 {
 
     public int maxClicks = 5;
-    public float fadeDuration = 0.5f;
+    public static int numDestroyed = 0;
+    public static int numToDestroy = 5;
+    public TextMeshProUGUI uiText;
 
     private int currentClicks = 0;
-    private Material material;
 
-    private void Start()
+    void Start()
     {
-        material = GetComponent<Renderer>().material;
-
-        Color fadedColor = material.color;
-        fadedColor.a = 1f;
-        material.color = fadedColor;
+        uiText.text = "Clear the dust 0/" + numToDestroy.ToString();
     }
 
-    private IEnumerator FadeOut()
-    {
-        Color fadedColor = material.color;
-
-        for (float t = 0f; t < fadeDuration; t += Time.deltaTime)
-        {
-            float alpha = Mathf.Lerp(1f, 0f, t / fadeDuration);
-            fadedColor.a = alpha;
-            material.color = fadedColor;
-            yield return null;
-        }
-
-        fadedColor.a = 0f;
-        material.color = fadedColor;
-        Destroy(gameObject);
-    }
-
-    private void OnMouseDown()
+    void OnMouseDown()
     {
         if (currentClicks < maxClicks)
         {
             currentClicks++;
 
-            Color fadedColor = material.color;
-            float alpha = Mathf.Lerp(1f, 0f, (float)currentClicks / maxClicks);
-            fadedColor.a = alpha;
-            material.color = fadedColor;
-        }
+            /*Color fadedColor = material.color;   
+            fadedColor.a -= fadeAmount;          
+            material.color = fadedColor;  */       
 
-        if (currentClicks >= maxClicks)
+
+        }
+        else
         {
-            StartCoroutine(FadeOut());
+            //Destroy(gameObject);
+            Destroy(gameObject);
+            numDestroyed++;
+
+        }
+        
+
+        uiText.text = "Wiped " + numDestroyed.ToString() + "/" + numToDestroy.ToString();
+
+        if (numDestroyed == numToDestroy)
+        {
+            
         }
     }
 }
