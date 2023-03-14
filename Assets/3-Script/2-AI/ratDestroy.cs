@@ -55,6 +55,9 @@ public class ratDestroy : MonoBehaviour
     private Material defaultMaterial;
     private RatDestroyUI ratDestroyUI;
 
+    private ToolSwitcher toolSwitcher;
+
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -62,6 +65,8 @@ public class ratDestroy : MonoBehaviour
         defaultMaterial = rend.material;
 
         ratDestroyUI = FindObjectOfType<RatDestroyUI>();
+
+        toolSwitcher = FindObjectOfType<ToolSwitcher>();
     }
 
     private void OnMouseDown()
@@ -91,6 +96,11 @@ public class ratDestroy : MonoBehaviour
             {
                 DestroyRat();
             }
+        }
+
+        if (toolSwitcher.GetActiveToolIndex() == 2) // Check if the active tool is the first tool
+        {
+            // Perform the action for taking the trash to the bin
         }
     }
 

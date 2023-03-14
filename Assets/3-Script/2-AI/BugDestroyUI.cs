@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class BugDestroyUI : MonoBehaviour
 {
-    public int bugsToDestroy = 3;
+    public int maxbugsToDestroy = 3;
     public TextMeshProUGUI textbug;
 
     private int bugsDestroyed = 0;
@@ -24,6 +24,6 @@ public class BugDestroyUI : MonoBehaviour
 
     private void UpdateUI()
     {
-        textbug.text = "Kill " + bugsDestroyed + " / " + bugsToDestroy + " Cockroacs";
+        textbug.text = "Kill " + bugsDestroyed + " / " + maxbugsToDestroy + " Cockroacs";
     }
 }

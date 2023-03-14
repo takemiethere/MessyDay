@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class RatDestroyUI : MonoBehaviour
 {
-    public int ratsToDestroy = 3;
+    public int maxratsToDestroy = 3;
     public TextMeshProUGUI text;
 
     private int ratsDestroyed = 0;
@@ -24,6 +24,6 @@ public class RatDestroyUI : MonoBehaviour
 
     private void UpdateUI()
     {
-        text.text = "Kill " + ratsDestroyed + " / " + ratsToDestroy + " Rats.";
+        text.text = "Kill " + ratsDestroyed + " / " + maxratsToDestroy + " Rats.";
     }
 }

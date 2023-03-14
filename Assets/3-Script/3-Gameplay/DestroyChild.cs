@@ -10,9 +10,17 @@ public class DestroyChild : MonoBehaviour
     public Material redMaterial;
     public Material defaultMaterial;
     public TextMeshProUGUI countText;
-
+    
     private bool isInZone = false;
     private int destroyedCount = 0;
+    private int maxdestroyedCount = 10;
+
+    private ToolSwitcher toolSwitcher;
+
+    private void Start()
+    {
+        toolSwitcher = FindObjectOfType<ToolSwitcher>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -51,7 +59,15 @@ public class DestroyChild : MonoBehaviour
                     destroyedCount++;
                 }
             }
-            countText.text = "Throw the trash  " + destroyedCount + "/10";
+            countText.text = "Throw the trash  " + destroyedCount + "/" + maxdestroyedCount;
+        }
+    }
+
+    private void OnMouseDown()
+    {
+        if (toolSwitcher.GetActiveToolIndex() == 0) // Check if the active tool is the first tool
+        {
+            // Perform the action for taking the trash to the bin
         }
     }
 }
