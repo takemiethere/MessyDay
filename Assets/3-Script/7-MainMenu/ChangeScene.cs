@@ -8,15 +8,15 @@ using UnityEngine.SceneManagement;
 public class ChangeScene : MonoBehaviour
 {
     public GameObject[] UiElements;
-    public bool IsActive;
+    
   /*  public FirstPersonLook firstPersonLook;*/
 
 
     public void ActiveElement(int indexElement)
     {
-        IsActive = !IsActive;
-        UiElements[indexElement].SetActive(IsActive);
-        
+        bool isActive = !UiElements[indexElement].activeSelf;
+        UiElements[indexElement].SetActive(isActive);
+
         /*foreach (var item in UiElements)
         {
             if (item != UiElements[indexElement]) // check if item is not the same as UiElement[indexElement]`
