@@ -20,6 +20,11 @@ public class RatDestroyUI : MonoBehaviour
     {
         ratsDestroyed++;
         UpdateUI();
+
+        if (ratsDestroyed >= maxratsToDestroy)
+        {
+            FindObjectOfType<SuccessScene>().TaskCompleted(3, 3); // task index 3 corresponds to killing rats
+        }
     }
 
     private void UpdateUI()

@@ -34,7 +34,7 @@ public class Item : MonoBehaviour
 
             /*Color fadedColor = material.color;   
             fadedColor.a -= fadeAmount;          
-            material.color = fadedColor;  */       
+            material.color = fadedColor;  */
 
 
         }
@@ -43,15 +43,20 @@ public class Item : MonoBehaviour
             //Destroy(gameObject);
             Destroy(gameObject);
             numDestroyed++;
+            
+            if (numDestroyed >= maxToDestroy)  //big O
+            {
+                FindObjectOfType<SuccessScene>().TaskCompleted(1, 5); // task index 1 corresponds to wiping dust
+            }
 
         }
-        
+
 
         uiText.text = "Wiped " + numDestroyed.ToString() + "/" + maxToDestroy.ToString();
 
         if (numDestroyed == maxToDestroy)
         {
-            
+
         }
 
         if (toolSwitcher.GetActiveToolIndex() == 0) // Check if the active tool is the first tool
@@ -59,6 +64,4 @@ public class Item : MonoBehaviour
             // Perform the action for taking the trash to the bin
         }
     }
-
-
 }

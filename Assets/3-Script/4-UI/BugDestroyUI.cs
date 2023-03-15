@@ -20,6 +20,11 @@ public class BugDestroyUI : MonoBehaviour
     {
         bugsDestroyed++;
         UpdateUI();
+
+        if (bugsDestroyed >= maxbugsToDestroy)
+        {
+            FindObjectOfType<SuccessScene>().TaskCompleted(2, 3); // task index 2 corresponds to killing bugs
+        }
     }
 
     private void UpdateUI()

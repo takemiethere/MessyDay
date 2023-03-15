@@ -10,7 +10,7 @@ public class DestroyChild : MonoBehaviour
     public Material redMaterial;
     public Material defaultMaterial;
     public TextMeshProUGUI countText;
-    
+
     private bool isInZone = false;
     private int destroyedCount = 0;
     private int maxdestroyedCount = 10;
@@ -58,6 +58,10 @@ public class DestroyChild : MonoBehaviour
                     Destroy(child.gameObject);
                     destroyedCount++;
                 }
+            }
+            if (destroyedCount >= maxdestroyedCount)
+            {
+                FindObjectOfType<SuccessScene>().TaskCompleted(0, 5); // task index 0 corresponds to taking out the trash
             }
             countText.text = "Throw the trash  " + destroyedCount + "/" + maxdestroyedCount;
         }
