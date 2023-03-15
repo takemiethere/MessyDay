@@ -17,14 +17,30 @@ public class Item : MonoBehaviour
     private ToolSwitcher toolSwitcher;
 
 
-
-
+    public int totalDust;
+    public int doneDust;
+    
+    //public Success scoreManager;
     void Start()
     {
         uiText.text = "Clear the dust 0/" + maxToDestroy.ToString();
         toolSwitcher = FindObjectOfType<ToolSwitcher>();
     }
 
+    private void Update()
+    {
+
+
+        totalDust = maxToDestroy;
+        doneDust = numDestroyed;
+
+
+
+    /*if (numDestroyed == maxToDestroy)
+        {
+            scoreManager.AddScore(5);
+        }*/
+    }
 
     void OnMouseDown()
     {

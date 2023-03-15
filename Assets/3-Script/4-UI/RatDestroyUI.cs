@@ -10,10 +10,26 @@ public class RatDestroyUI : MonoBehaviour
     public TextMeshProUGUI text;
 
     private int ratsDestroyed = 0;
+    //public Success scoreManager;
+
+    public int totalRat;
+    public int doneRat;
 
     private void Start()
     {
         UpdateUI();
+    }
+
+    private void Update()
+    {
+
+        totalRat = maxratsToDestroy;
+        doneRat = ratsDestroyed;
+
+        /*if (ratsDestroyed == maxratsToDestroy)
+        {
+            scoreManager.AddScore(5);
+        }*/
     }
 
     public void RatDestroyed()

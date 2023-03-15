@@ -17,6 +17,7 @@ public class Cleaning : MonoBehaviour
     public Image BgringBar;
     public TextMeshProUGUI pressE;
 
+
     void Update()
     {
         float distance = Vector3.Distance(transform.position, Camera.main.transform.position);
@@ -79,6 +80,7 @@ public class Cleaning : MonoBehaviour
                 isCarryingGarbage = false;
             }
         }
+
 
     }
 

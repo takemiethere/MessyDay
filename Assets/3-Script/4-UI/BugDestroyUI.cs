@@ -10,10 +10,28 @@ public class BugDestroyUI : MonoBehaviour
     public TextMeshProUGUI textbug;
 
     private int bugsDestroyed = 0;
+    //public Success scoreManager;
+
+    public int totalBug;
+    public int doneBug;
 
     private void Start()
     {
         UpdateUI();
+    }
+
+    private void Update()
+    {
+
+
+
+        totalBug = maxbugsToDestroy;
+        doneBug = bugsDestroyed;
+
+        /*if (bugsDestroyed == maxbugsToDestroy)
+        {
+            scoreManager.AddScore(5);
+        }*/
     }
 
     public void BugDestroyed()

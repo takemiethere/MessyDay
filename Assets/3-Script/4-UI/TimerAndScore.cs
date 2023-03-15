@@ -6,11 +6,10 @@ public class TimerAndScore : MonoBehaviour
 {
     public float timeLeft = 3.0f;
     public TextMeshProUGUI timerText;
-    /*public int score = 0;
-    public TextMeshProUGUI scoreText;*/
     private bool timeUp = false;
     public Image timerBarImage;
 
+    //public Success starManagerScript;
 
     void Update()
     {
@@ -26,28 +25,9 @@ public class TimerAndScore : MonoBehaviour
             TimeUp();
         }
 
-
-        if (!timeUp)
-        {
-            if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
-            {
-                Ray ray = Camera.main.ScreenPointToRay(Input.touches[0].position);
-                RaycastHit hit;
-
-                if (Physics.Raycast(ray, out hit))
-                {
-                    if (hit.transform.CompareTag("Enemy"))
-                    {
-                        Destroy(hit.transform.gameObject);
-                        /*                        score++;
-                                                scoreText.text = score + " frogs was ate.";
-
-                                                Debug.Log("You ate: " + score + "Frogs");*/
-                    }
-                }
-            }
-        }
     }
+
+
     void TimeUp()
     {
         Time.timeScale = 0;
@@ -55,4 +35,5 @@ public class TimerAndScore : MonoBehaviour
         // disable player's input script
         this.enabled = false;
     }
+
 }

@@ -89,7 +89,7 @@ public class bugDestroy : MonoBehaviour
         }
     }
 
-    private void OnGUI()
+   /* private void OnGUI()
     {
         if (isCursorOverObject)
         {
@@ -100,5 +100,5 @@ public class bugDestroy : MonoBehaviour
                 GUI.Label(new Rect(10f, 10f, 100f, 20f), text);
             }
         }
-    }
+    }*/
 }
