@@ -55,10 +55,16 @@ public class InGame : MonoBehaviour
         }
     }
 
+    public void Restar_Buttom()
+    {
+        /*SceneManager.LoadScene(SceneManager.GetActiveScene().name);*/
+    }
+
     public void GotoScene(string nameScene)
     {
         SceneManager.LoadScene(nameScene);
-        ActiveElement(1);
+        Destroy(gameObject);
+        /*ActiveElement(0);*/
     }
 
     public void QuitGame()
