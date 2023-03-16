@@ -49,14 +49,25 @@ public class TimerAndScore : MonoBehaviour
     public TextMeshProUGUI timerText;
     /*public int score = 0;
     public TextMeshProUGUI scoreText;*/
-    private bool timeUp = false;
-    public Image timerBarImage;
+    public bool timeUp = false;
+    public Image timerBarImageleft;
+    public Image timerBarImageRight;
 
-    public Success starManagerScript;
+    private Success starManagerScript;
+
+    public GameObject StarUI;
+    public GameObject BDStarUI;
+    public GameObject BGStarUI;
+    public GameObject TextStarUI;
+
 
     void Start()
     {
         starManagerScript = FindObjectOfType<Success>();
+        StarUI.SetActive(false);
+        BDStarUI.SetActive(false);
+        BGStarUI.SetActive(false);
+        TextStarUI.SetActive(false);
     }
 
 
@@ -66,7 +77,9 @@ public class TimerAndScore : MonoBehaviour
         int minutes = Mathf.FloorToInt(timeLeft / 60.0f);
         int seconds = Mathf.FloorToInt(timeLeft % 60.0f);
         timerText.text = string.Format("{0:0}:{1:00}", minutes, seconds);
-        timerBarImage.fillAmount = timeLeft / 180.0f; // Set the fill amount based on the remaining time
+        timerBarImageleft.fillAmount = timeLeft / 180.0f; // Set the fill amount based on the remaining time
+        timerBarImageRight.fillAmount = timeLeft / 180.0f;
+
 
         if (timeLeft < 0)
         {
@@ -103,6 +116,10 @@ public class TimerAndScore : MonoBehaviour
     {
         Time.timeScale = 0;
         timerText.text = "Time's up!";
+        StarUI.SetActive(true);
+        BDStarUI.SetActive(true);
+        BGStarUI.SetActive(true);
+        TextStarUI.SetActive(true);
         // disable player's input script
         this.enabled = false;
     }
