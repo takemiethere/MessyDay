@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< Updated upstream:Assets/2-Texture/livingroom table/1.meta
 guid: 19682baad1179244b8a8fcbd064cd7b0
+========
+guid: c74477bf960a1194584a0febf4dd1bc4
+>>>>>>>> Stashed changes:Assets/4-Materials/paper.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
