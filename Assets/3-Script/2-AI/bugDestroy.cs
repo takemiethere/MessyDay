@@ -17,15 +17,11 @@ public class bugDestroy : MonoBehaviour
     private float flashTimer;
     private BugDestroyUI bugsDestroyUI;
 
-    private ToolSwitcher toolSwitcher;
-
     private void Start()
     {
         renderer = GetComponent<Renderer>();
         defaultMaterial = renderer.material;
-        bugsDestroyUI = FindObjectOfType<BugDestroyUI>();      
-        
-        toolSwitcher = FindObjectOfType<ToolSwitcher>();
+        bugsDestroyUI = FindObjectOfType<BugDestroyUI>();
     }
 
     private void Update()
@@ -93,16 +89,7 @@ public class bugDestroy : MonoBehaviour
         }
     }
 
-    private void OnMouseDown()
-    {
-        if (toolSwitcher.GetActiveToolIndex() == 1) // Check if the active tool is the first tool
-        {
-            // Perform the action for taking the trash to the bin
-        }
-    }
-
-
-    private void OnGUI()
+   /* private void OnGUI()
     {
         if (isCursorOverObject)
         {
@@ -113,5 +100,5 @@ public class bugDestroy : MonoBehaviour
                 GUI.Label(new Rect(10f, 10f, 100f, 20f), text);
             }
         }
-    }
+    }*/
 }

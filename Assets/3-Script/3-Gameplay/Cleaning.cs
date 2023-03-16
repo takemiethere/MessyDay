@@ -17,12 +17,6 @@ public class Cleaning : MonoBehaviour
     public Image BgringBar;
     public TextMeshProUGUI pressE;
 
-    private ToolSwitcher toolSwitcher;
-
-    private void Start()
-    {
-        toolSwitcher = FindObjectOfType<ToolSwitcher>();
-    }
 
     void Update()
     {
@@ -87,13 +81,7 @@ public class Cleaning : MonoBehaviour
             }
         }
 
-    }
-    private void OnMouseDown()
-    {
-        if (toolSwitcher.GetActiveToolIndex() == 0) // Check if the active tool is the first tool
-        {
-            // Perform the action for taking the trash to the bin
-        }
+
     }
 
 }
