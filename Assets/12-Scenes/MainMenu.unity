@@ -1393,6 +1393,7 @@ GameObject:
   - component: {fileID: 1325854406}
   - component: {fileID: 1325854407}
   - component: {fileID: 1325854408}
+  - component: {fileID: 1325854409}
   m_Layer: 5
   m_Name: AddScript
   m_TagString: Untagged
@@ -1435,7 +1436,6 @@ MonoBehaviour:
   UiElements:
   - {fileID: 1303995685}
   - {fileID: 660156297}
-  IsActive: 0
 --- !u!114 &1325854408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1450,6 +1450,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fullScreenToggle: {fileID: 1682182789}
   resolutionDropdown: {fileID: 1108355766}
+--- !u!114 &1325854409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325854405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96ac0cee49f458945bc07ee71625cdc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameInput: {fileID: 0}
+  welcomeText: {fileID: 0}
+  buttonObject: {fileID: 0}
+  nextSceneName: 
 --- !u!1 &1334350273
 GameObject:
   m_ObjectHideFlags: 0
