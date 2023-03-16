@@ -71,7 +71,7 @@ public class InGame : MonoBehaviour
     public void GotoScene(string nameScene)
     {
         SceneManager.LoadScene(nameScene);
-        Destroy(gameObject);
+        
         /*ActiveElement(0);*/
     }
 
