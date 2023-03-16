@@ -4537,6 +4537,8 @@ MonoBehaviour:
   ringBar: {fileID: 1821667061}
   BgringBar: {fileID: 657406321}
   pressE: {fileID: 2093650100}
+  totalGarbage: 0
+  doneGarbage: 0
 --- !u!65 &424662024
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5637,6 +5639,8 @@ MonoBehaviour:
   ringBar: {fileID: 1821667061}
   BgringBar: {fileID: 657406321}
   pressE: {fileID: 2093650100}
+  totalGarbage: 0
+  doneGarbage: 0
 --- !u!1 &479099761
 GameObject:
   m_ObjectHideFlags: 0
@@ -5711,7 +5715,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1673735600}
-  - {fileID: 1216449476}
   - {fileID: 1310318985}
   - {fileID: 1549117923}
   m_Father: {fileID: 723249885}
@@ -5736,6 +5739,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   progressBar: {fileID: 1310318986}
   percentageText: {fileID: 1549117924}
+  fromfive: 0
+  totalTasks: 0
+  completedTasks: 5
 --- !u!1 &482677885
 GameObject:
   m_ObjectHideFlags: 0
@@ -7512,6 +7518,8 @@ MonoBehaviour:
   ringBar: {fileID: 1821667061}
   BgringBar: {fileID: 657406321}
   pressE: {fileID: 2093650100}
+  totalGarbage: 0
+  doneGarbage: 0
 --- !u!1 &616619291
 GameObject:
   m_ObjectHideFlags: 0
@@ -14050,15 +14058,15 @@ RectTransform:
   m_GameObject: {fileID: 1216449475}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 8.828795, y: 1.6238799, z: 8.8287945}
+  m_LocalScale: {x: 1.058018, y: 0.38933855, z: 2.1167762}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 480576736}
-  m_RootOrder: 1
+  m_Father: {fileID: 1673735600}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.503368, y: 85.91993}
+  m_AnchoredPosition: {x: -0.30000377, y: 20.600006}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1216449477
@@ -14206,6 +14214,8 @@ MonoBehaviour:
   ringBar: {fileID: 1821667061}
   BgringBar: {fileID: 657406321}
   pressE: {fileID: 2093650100}
+  totalGarbage: 0
+  doneGarbage: 0
 --- !u!65 &1222922442
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14712,7 +14722,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 480576736}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -16246,6 +16256,8 @@ MonoBehaviour:
   ringBar: {fileID: 1821667061}
   BgringBar: {fileID: 657406321}
   pressE: {fileID: 2093650100}
+  totalGarbage: 0
+  doneGarbage: 0
 --- !u!1 &1476980127 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1570836523067878725, guid: a7cb40be6d751f246bd61331afe806f4, type: 3}
@@ -17299,7 +17311,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 480576736}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -18905,7 +18917,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 8.344656, y: 4.1708684, z: 4.1708684}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1216449476}
   m_Father: {fileID: 480576736}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -21723,7 +21736,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Take 5 to the bin
+  m_text: Take Trash to the bin
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 94ed0ee7665216f478f5180387c17f23, type: 2}
   m_sharedMaterial: {fileID: 4666545840026958736, guid: 94ed0ee7665216f478f5180387c17f23, type: 2}
@@ -32348,6 +32361,8 @@ MonoBehaviour:
   ringBar: {fileID: 1821667061}
   BgringBar: {fileID: 657406321}
   pressE: {fileID: 2093650100}
+  totalGarbage: 0
+  doneGarbage: 0
 --- !u!54 &7846167669836432336
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -32433,6 +32448,8 @@ MonoBehaviour:
   ringBar: {fileID: 1821667061}
   BgringBar: {fileID: 657406321}
   pressE: {fileID: 2093650100}
+  totalGarbage: 0
+  doneGarbage: 0
 --- !u!4 &7862836166486716533
 Transform:
   m_ObjectHideFlags: 0
@@ -33455,6 +33472,8 @@ MonoBehaviour:
   ringBar: {fileID: 1821667061}
   BgringBar: {fileID: 657406321}
   pressE: {fileID: 2093650100}
+  totalGarbage: 0
+  doneGarbage: 0
 --- !u!23 &9125935716748471645
 MeshRenderer:
   m_ObjectHideFlags: 0

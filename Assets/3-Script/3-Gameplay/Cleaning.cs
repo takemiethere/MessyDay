@@ -17,8 +17,11 @@ public class Cleaning : MonoBehaviour
     public Image BgringBar;
     public TextMeshProUGUI pressE;
 
+    public int totalGarbage=0;//here
+    public int doneGarbage=0; 
+    //public Success scoreManager;
 
-    void Update()
+    public void Update()
     {
         float distance = Vector3.Distance(transform.position, Camera.main.transform.position);
 
@@ -54,8 +57,9 @@ public class Cleaning : MonoBehaviour
                     GameObject garbageBagsObj = Instantiate(garbageBagsPrefab, garbageBagsParent);
                     garbageBagsObj.transform.localPosition = Vector3.zero;
                     isCarryingGarbage = true;
-                    
+
                     Destroy(gameObject);
+                    doneGarbage++;
                     
                     ringBar.gameObject.SetActive(false);
                     BgringBar.gameObject.SetActive(false);

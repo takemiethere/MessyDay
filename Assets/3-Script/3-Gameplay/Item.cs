@@ -60,10 +60,10 @@ public class Item : MonoBehaviour
             Destroy(gameObject);
             numDestroyed++;
             
-            if (numDestroyed >= maxToDestroy)  //big O
+          /*  if (numDestroyed >= maxToDestroy)  //big O
             {
                 FindObjectOfType<SuccessScene>().TaskCompleted(1, 5); // task index 1 corresponds to wiping dust
-            }
+            }*/
 
         }
 
