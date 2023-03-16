@@ -5697,7 +5697,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &480576736
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5729,11 +5729,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 480576735}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 951a287a95b25ba4ca8b92b7c2f0b792, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  progressBar: {fileID: 1310318986}
+  percentageText: {fileID: 1549117924}
 --- !u!1 &482677885
 GameObject:
   m_ObjectHideFlags: 0
@@ -6918,6 +6920,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeLeft: 180
   timerText: {fileID: 1387271980}
+  timeUp: 0
   timerBarImage: {fileID: 575936994}
 --- !u!114 &575936994
 MonoBehaviour:
@@ -14055,7 +14058,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.503368, y: 85.91993}
+  m_AnchoredPosition: {x: -2.5033958, y: 85.9199}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1216449477
@@ -14713,7 +14716,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.503368, y: 85.91993}
+  m_AnchoredPosition: {x: -2.5034091, y: 85.91984}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1310318986
@@ -18606,6 +18609,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeLeft: 180
   timerText: {fileID: 1387271980}
+  timeUp: 0
   timerBarImage: {fileID: 1622543522}
 --- !u!1 &1622553820 stripped
 GameObject:
@@ -21173,6 +21177,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeLeft: 180
   timerText: {fileID: 1387271980}
+  timeUp: 0
   timerBarImage: {fileID: 1905402432}
 --- !u!114 &1905402432
 MonoBehaviour:
