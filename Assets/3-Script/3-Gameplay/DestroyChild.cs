@@ -13,7 +13,7 @@ public class DestroyChild : MonoBehaviour
 
     private bool isInZone = false;
     private int destroyedCount = 0;
-    private int maxdestroyedCount = 5;
+    private int maxdestroyedCount = 2;
 
     private ToolSwitcher toolSwitcher;
     //public Success scoreManager;
@@ -23,7 +23,9 @@ public class DestroyChild : MonoBehaviour
 
     private void Start()
     {
-        toolSwitcher = FindObjectOfType<ToolSwitcher>();
+        toolSwitcher = FindObjectOfType<ToolSwitcher>();        
+        totalBin = maxdestroyedCount;
+        doneBin = destroyedCount;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -52,9 +54,8 @@ public class DestroyChild : MonoBehaviour
 
     private void Update()
     {
-        
-        totalBin = maxdestroyedCount;
-        doneBin = destroyedCount;
+
+
 
 
         if (isInZone && Input.GetKeyDown(KeyCode.F))
@@ -68,20 +69,18 @@ public class DestroyChild : MonoBehaviour
                     destroyedCount++;
                 }
             }
-            if (destroyedCount >= maxdestroyedCount)
-            {
-                FindObjectOfType<SuccessScene>().TaskCompleted(0, 5); // task index 0 corresponds to taking out the trash
-            }
-            countText.text = "Throw the trash  " + destroyedCount + "/" + maxdestroyedCount;
+            doneBin = destroyedCount;
+            
+            //countText.text = "Throw the trash  " + destroyedCount + "/" + maxdestroyedCount;
+            countText.text = "Throw the trash  " + doneBin + "/" + totalBin;
         }
-
 
         /*if (destroyedCount == maxdestroyedCount) //add 15/3
         {
             scoreManager.AddScore(5);
         }*/
 
-   
+
 
     }
 
