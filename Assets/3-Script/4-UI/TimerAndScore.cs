@@ -50,7 +50,7 @@ public class TimerAndScore : MonoBehaviour
     /*public int score = 0;
     public TextMeshProUGUI scoreText;*/
     public bool timeUp = false;
-    public Image timerBarImageleft;
+    public Image timerBarImageLeft;
     public Image timerBarImageRight;
 
     private Success starManagerScript;
@@ -77,7 +77,7 @@ public class TimerAndScore : MonoBehaviour
         int minutes = Mathf.FloorToInt(timeLeft / 60.0f);
         int seconds = Mathf.FloorToInt(timeLeft % 60.0f);
         timerText.text = string.Format("{0:0}:{1:00}", minutes, seconds);
-        timerBarImageleft.fillAmount = timeLeft / 180.0f; // Set the fill amount based on the remaining time
+        timerBarImageLeft.fillAmount = timeLeft / 180.0f; // Set the fill amount based on the remaining time
         timerBarImageRight.fillAmount = timeLeft / 180.0f;
 
 

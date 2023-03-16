@@ -4537,6 +4537,8 @@ MonoBehaviour:
   ringBar: {fileID: 1821667061}
   BgringBar: {fileID: 657406321}
   pressE: {fileID: 2093650100}
+  totalGarbage: 0
+  doneGarbage: 0
 --- !u!65 &424662024
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5637,6 +5639,8 @@ MonoBehaviour:
   ringBar: {fileID: 1821667061}
   BgringBar: {fileID: 657406321}
   pressE: {fileID: 2093650100}
+  totalGarbage: 0
+  doneGarbage: 0
 --- !u!1 &479099761
 GameObject:
   m_ObjectHideFlags: 0
@@ -5697,7 +5701,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &480576736
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5736,6 +5740,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   progressBar: {fileID: 1310318986}
   percentageText: {fileID: 1549117924}
+  fromfive: 0
+  totalTasks: 0
+  completedTasks: 0
 --- !u!1 &482677885
 GameObject:
   m_ObjectHideFlags: 0
@@ -6921,7 +6928,12 @@ MonoBehaviour:
   timeLeft: 180
   timerText: {fileID: 1387271980}
   timeUp: 0
-  timerBarImage: {fileID: 575936994}
+  timerBarImageLeft: {fileID: 0}
+  timerBarImageRight: {fileID: 0}
+  StarUI: {fileID: 0}
+  BDStarUI: {fileID: 0}
+  BGStarUI: {fileID: 0}
+  TextStarUI: {fileID: 0}
 --- !u!114 &575936994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7512,6 +7524,8 @@ MonoBehaviour:
   ringBar: {fileID: 1821667061}
   BgringBar: {fileID: 657406321}
   pressE: {fileID: 2093650100}
+  totalGarbage: 0
+  doneGarbage: 0
 --- !u!1 &616619291
 GameObject:
   m_ObjectHideFlags: 0
@@ -14035,7 +14049,7 @@ GameObject:
   - component: {fileID: 1216449478}
   - component: {fileID: 1216449477}
   m_Layer: 5
-  m_Name: BGStar
+  m_Name: BDStar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14206,6 +14220,8 @@ MonoBehaviour:
   ringBar: {fileID: 1821667061}
   BgringBar: {fileID: 657406321}
   pressE: {fileID: 2093650100}
+  totalGarbage: 0
+  doneGarbage: 0
 --- !u!65 &1222922442
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16246,6 +16262,8 @@ MonoBehaviour:
   ringBar: {fileID: 1821667061}
   BgringBar: {fileID: 657406321}
   pressE: {fileID: 2093650100}
+  totalGarbage: 0
+  doneGarbage: 0
 --- !u!1 &1476980127 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1570836523067878725, guid: a7cb40be6d751f246bd61331afe806f4, type: 3}
@@ -18529,9 +18547,8 @@ GameObject:
   - component: {fileID: 1622543521}
   - component: {fileID: 1622543523}
   - component: {fileID: 1622543522}
-  - component: {fileID: 1622543524}
   m_Layer: 5
-  m_Name: Fill
+  m_Name: LFill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18595,22 +18612,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1622543520}
   m_CullTransparentMesh: 1
---- !u!114 &1622543524
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1622543520}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fb0404ad1fa045788dac678242681a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeLeft: 180
-  timerText: {fileID: 1387271980}
-  timeUp: 0
-  timerBarImage: {fileID: 1622543522}
 --- !u!1 &1622553820 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 71a3ade7ccc5ada4582b1f960f52092f, type: 3}
@@ -18888,7 +18889,7 @@ GameObject:
   - component: {fileID: 1673735602}
   - component: {fileID: 1673735601}
   m_Layer: 5
-  m_Name: Blue
+  m_Name: BGBlue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19529,8 +19530,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1739912106}
+  - component: {fileID: 1739912107}
   m_Layer: 5
-  m_Name: TopBar
+  m_Name: TimeBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19562,6 +19564,27 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 113.7303}
   m_Pivot: {x: 0.5, y: 1}
+--- !u!114 &1739912107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739912105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fb0404ad1fa045788dac678242681a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeLeft: 10
+  timerText: {fileID: 1387271980}
+  timeUp: 0
+  timerBarImageLeft: {fileID: 1622543522}
+  timerBarImageRight: {fileID: 1905402432}
+  StarUI: {fileID: 1310318984}
+  BDStarUI: {fileID: 1216449475}
+  BGStarUI: {fileID: 1673735599}
+  TextStarUI: {fileID: 1549117922}
 --- !u!1 &1746963800
 GameObject:
   m_ObjectHideFlags: 0
@@ -21135,9 +21158,8 @@ GameObject:
   - component: {fileID: 1905402430}
   - component: {fileID: 1905402433}
   - component: {fileID: 1905402432}
-  - component: {fileID: 1905402431}
   m_Layer: 5
-  m_Name: Fill (1)
+  m_Name: RFill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21163,22 +21185,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0.00024414062, y: 0}
   m_SizeDelta: {x: 183.1368, y: 189.18}
   m_Pivot: {x: 1, y: 1}
---- !u!114 &1905402431
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1905402429}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fb0404ad1fa045788dac678242681a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeLeft: 180
-  timerText: {fileID: 1387271980}
-  timeUp: 0
-  timerBarImage: {fileID: 1905402432}
 --- !u!114 &1905402432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32348,6 +32354,8 @@ MonoBehaviour:
   ringBar: {fileID: 1821667061}
   BgringBar: {fileID: 657406321}
   pressE: {fileID: 2093650100}
+  totalGarbage: 0
+  doneGarbage: 0
 --- !u!54 &7846167669836432336
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -32433,6 +32441,8 @@ MonoBehaviour:
   ringBar: {fileID: 1821667061}
   BgringBar: {fileID: 657406321}
   pressE: {fileID: 2093650100}
+  totalGarbage: 0
+  doneGarbage: 0
 --- !u!4 &7862836166486716533
 Transform:
   m_ObjectHideFlags: 0
@@ -33455,6 +33465,8 @@ MonoBehaviour:
   ringBar: {fileID: 1821667061}
   BgringBar: {fileID: 657406321}
   pressE: {fileID: 2093650100}
+  totalGarbage: 0
+  doneGarbage: 0
 --- !u!23 &9125935716748471645
 MeshRenderer:
   m_ObjectHideFlags: 0
