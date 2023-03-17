@@ -2775,9 +2775,45 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1709987102}
     m_Modifications:
+    - target: {fileID: 4473119857519597370, guid: fa720fb83a6590b45b49fba58b37ffb7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4473119857664299100, guid: fa720fb83a6590b45b49fba58b37ffb7, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4473119857664299100, guid: fa720fb83a6590b45b49fba58b37ffb7, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4473119857664299100, guid: fa720fb83a6590b45b49fba58b37ffb7, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1325854408}
+    - target: {fileID: 4473119857664299100, guid: fa720fb83a6590b45b49fba58b37ffb7, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4473119857664299100, guid: fa720fb83a6590b45b49fba58b37ffb7, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetFullScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 4473119857664299100, guid: fa720fb83a6590b45b49fba58b37ffb7, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Sys_ScreenSize, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4473119857664299100, guid: fa720fb83a6590b45b49fba58b37ffb7, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4473119858039384060, guid: fa720fb83a6590b45b49fba58b37ffb7, type: 3}
       propertyPath: m_Name
       value: Ui-Settings
+      objectReference: {fileID: 0}
+    - target: {fileID: 4473119858039384060, guid: fa720fb83a6590b45b49fba58b37ffb7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4473119858039384063, guid: fa720fb83a6590b45b49fba58b37ffb7, type: 3}
       propertyPath: m_Pivot.x
@@ -2867,5 +2903,9 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1325854407}
+    - target: {fileID: 4473119859376746677, guid: fa720fb83a6590b45b49fba58b37ffb7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa720fb83a6590b45b49fba58b37ffb7, type: 3}

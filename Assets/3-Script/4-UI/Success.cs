@@ -65,7 +65,7 @@ public class Success : MonoBehaviour
             playerGet = fromfive + 15.38f;
 
             progressBar.fillAmount = (float)playerGet / getfive;
-            percentageText.text = "Star: " + playerGet + "%";
+            percentageText.text = "Star: " + (int)playerGet + "%";
         }
     }
 
