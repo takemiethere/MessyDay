@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class bugDestroy : MonoBehaviour
 {
-    public float clickTime = 5f;
+    public float clickTime = 3f;
     public float maxDistance = 3f;
     public Material redMaterial;
     public float flashSpeed = 0.1f;
@@ -55,7 +55,7 @@ public class bugDestroy : MonoBehaviour
                     if (clickTimer >= clickTime)
                     {
                         isDestroying = true;
-                        renderer.material = redMaterial;
+                        renderer.material = redMaterial; // set the material to red
                         // Instantiate the particle system at the position of the bug
                         Instantiate(particleSystem, transform.position, Quaternion.identity);
                         bugsDestroyUI.BugDestroyed();
@@ -80,25 +80,5 @@ public class bugDestroy : MonoBehaviour
                 }
             }
         }
-        else
-        {
-            clickTimer = 0f;
-            isCursorOverObject = false;
-            flashTimer = 0f;
-            renderer.material = defaultMaterial;
-        }
     }
-
-   /* private void OnGUI()
-    {
-        if (isCursorOverObject)
-        {
-            float timeLeft = clickTime - clickTimer;
-            if (timeLeft > 0f)
-            {
-                string text = "Time Left: " + timeLeft.ToString("F1") + "s";
-                GUI.Label(new Rect(10f, 10f, 100f, 20f), text);
-            }
-        }
-    }*/
 }
