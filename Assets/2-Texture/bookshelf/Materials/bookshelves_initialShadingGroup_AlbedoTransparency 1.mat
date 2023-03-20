@@ -34,7 +34,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseColorMap:
-        m_Texture: {fileID: 2800000, guid: 172641790d571e94696f59eac41e2303, type: 3}
+        m_Texture: {fileID: 2800000, guid: 3fc1ef74d569e2742b354162af51fc7e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
@@ -94,7 +94,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 172641790d571e94696f59eac41e2303, type: 3}
+        m_Texture: {fileID: 2800000, guid: 3fc1ef74d569e2742b354162af51fc7e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
@@ -163,8 +163,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AORemapMax: 0
-    - _AORemapMin: 0
+    - _AORemapMax: 0.3824394
+    - _AORemapMin: 0.2692986
     - _ATDistance: 1
     - _AddPrecomputedVelocity: 0
     - _AlbedoAffectEmissive: 0
@@ -232,8 +232,8 @@ Material:
     - _LinkDetailsWithBase: 1
     - _MaterialID: 1
     - _Metallic: 0
-    - _MetallicRemapMax: 0.03476727
-    - _MetallicRemapMin: 0
+    - _MetallicRemapMax: 0.48791996
+    - _MetallicRemapMin: 0.43134943
     - _Mode: 0
     - _NormalMapSpace: 0
     - _NormalScale: 0
@@ -252,8 +252,8 @@ Material:
     - _ReceivesSSRTransparent: 0
     - _RefractionModel: 0
     - _Smoothness: 1
-    - _SmoothnessRemapMax: 0
-    - _SmoothnessRemapMin: 0
+    - _SmoothnessRemapMax: 0.18090758
+    - _SmoothnessRemapMin: 0.067766465
     - _SmoothnessTextureChannel: 0
     - _SpecularAAScreenSpaceVariance: 0.1
     - _SpecularAAThreshold: 0.2
